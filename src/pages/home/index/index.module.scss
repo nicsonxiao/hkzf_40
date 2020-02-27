@@ -1,0 +1,143 @@
+.index_swiper{
+  position: relative;
+  .city_input_wrap{
+    position: absolute;
+    top: 25px;
+    z-index: 9999;
+    width: 100%;
+  }
+}
+
+//首页导航开始
+.index_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding:10px 0;
+    .nav_item {
+        flex: 1;
+        text-align: center;
+      img {
+        width: 48px;
+      }
+      p {
+        margin-top: 7px;
+      }
+    }
+  }
+  //首页导航结束
+
+
+  //租房小组开始
+  .index_rentings {
+    padding:0 10px;
+    .rentings_title {
+      display: flex;
+      margin: 15px 0 15px 10px;
+      justify-content: space-between;
+      span {
+        font-size: 16px;
+        color: #000;
+        font-weight: 600;
+      }
+  
+      a {
+        color: #787d82;
+      }
+    }
+  
+    .rentings_content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .renting_item {
+        background-color: #fff;
+        display: flex;
+        width: 49%;
+        padding: 10px 5px;
+        margin: 0 1% 10px 0;
+        align-items: center;
+        .renting_item_info {
+          flex: 3;
+          .renting_item_title {
+            font-size: 13px;
+            color: #000;
+            margin-bottom: 5px;
+            font-weight: 600;
+          }
+  
+          .renting_item_desc {
+            font-size: 12px;
+            color: #999;
+          }
+        }
+  
+        .renting_item_img {
+          flex: 2;
+          img {
+            width: 55px;
+          }
+        }
+      }
+    }
+  }
+//租房小组结束
+
+
+
+//最新资讯开始
+.indexNews {
+  background-color: #fff;
+  padding: 10px;
+  .news_title {
+    margin: 10px 0 5px 10px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 800;
+  }
+
+  .news_item {
+    display: flex;
+    height: 120px;
+    padding: 15px 10px 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    .news_img {
+      img {   
+         height: 90px;
+        width: 120px;
+      }
+    }
+
+    .news_info {
+      height: 100%;
+      padding-left: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .news_main {
+        .news_name {
+          margin-bottom: 15px;
+          font-size: 15px;
+          font-weight: 800;
+        }
+      }
+
+      .news_desc {
+        width: 100%;
+        color: #9c9fa1;
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        span.news_from {
+
+        }
+
+        span.news_date {
+
+        }
+      }
+    }
+  }
+}
+//最新资讯结束
