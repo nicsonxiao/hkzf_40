@@ -1,6 +1,9 @@
 import React from "react";
 import { Carousel } from 'antd-mobile';
-import axios from "axios";
+// import axios from "axios";
+
+//引入基础路径
+import axios,{ BaseURL } from "../../../utils/reuqest";
 
 //图片要以js的形式引入
 import nav1 from "../../../assets/images/nav-1.png";
@@ -31,7 +34,7 @@ class index extends React.Component {
   }
   //轮播图数据
   getSwiperList() {
-    axios.get("http://157.122.54.189:9060/home/swiper")
+    axios.get(BaseURL+"/home/swiper")
       .then(res => {
         // console.log(res)
         this.setState({
@@ -42,7 +45,7 @@ class index extends React.Component {
 
   //获取租房小组
   getRentings() {
-    axios.get("http://157.122.54.189:9060/home/groups")
+    axios.get(BaseURL+"/home/groups")
       .then(res => {
         // console.log(res)
         this.setState({
@@ -53,7 +56,7 @@ class index extends React.Component {
 
   //获取最新资讯
   getNews() {
-    axios.get("http://157.122.54.189:9060/home/news")
+    axios.get(BaseURL+"/home/news")
       .then(res => {
         // console.log(res)
         this.setState({
@@ -79,7 +82,7 @@ class index extends React.Component {
                 style={{ display: 'inline-block', width: '100%' }}
               >
                 <img
-                  src={"http://157.122.54.189:9060" + val.imgSrc}
+                  src={BaseURL + val.imgSrc}
                   alt=""
                 />
               </a>
@@ -111,7 +114,7 @@ class index extends React.Component {
                   <div className={indexCss.renting_item_desc}>{v.desc}</div>
                 </div>
                 <div className={indexCss.renting_item_img}>
-                  <img src={"http://157.122.54.189:9060" + v.imgSrc} alt="" />
+                  <img src={BaseURL + v.imgSrc} alt="" />
                 </div>
               </div>
             )}
@@ -124,7 +127,7 @@ class index extends React.Component {
           <div className={indexCss.news_title}>最新资讯</div>
           {this.state.news.map(v => <div className={indexCss.news_item} key={v.id}>
             <div className={indexCss.news_img}>
-              <img src={"http://157.122.54.189:9060" + v.imgSrc} alt="" />
+              <img src={BaseURL + v.imgSrc} alt="" />
             </div>
             <div className={indexCss.news_info}>
               <div className={indexCss.news_main}>

@@ -7,6 +7,7 @@ import MapCity from "./pages/mapCity";
 // import { LocalCity } from "./utils/mapHelper";
 import { localCityAction } from "./store/actionCreator";
 import { connect } from "react-redux";
+import Citychoose from "./pages/citychoose";
 
 class App extends Component{
 componentDidMount(){
@@ -22,6 +23,7 @@ componentDidMount(){
           <Switch>
           <Route path="/mapCity" component={MapCity}></Route>
           <Route path="/home" component={Home}></Route>
+          <Route path="/citychoose" component={Citychoose}></Route>
           <Route exact path="/">
             <Redirect to="/home"></Redirect>
           </Route>
